@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notification</title>
+  <style>
+    body{
+      background-color:Black ;
+      color:white;
+      height:100vh;
+    }
+    .notification{
+      display:flex;
+      flex-direction:row;
+      justify-content:center;
+      margin-top:20px;
+    }
+     .notification h1{
+      position:relative;
+      font-weight:bold;
+      font-size:25px;
+      color:white;
+    }
+    .notification a{
+      position:absolute;
+      left:320px;
+      text-decoration:none;
+      color:#fb4242;
+      font-size:50px;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .on{
+      background-color:#212121;
+      height:90px;
+      width:60%;
+      margin:40px auto;
+      border-radius:15px;
+      padding:30px;
+      font-weight:bold;
+      font-size:30px;
+      display:flex;
+      align-items:center;
+    }
+
+    .switch{
+      position:relative;
+      width:70px;
+      height:40px;
+      display:inline-block;
+      margin-left:auto;
+      -webkit-tap-highlight-color:transparent;
+    }
+
+    .switch input{
+      display:none;
+    }
+
+    .slider{
+      position:absolute;
+      inset:0;
+      background-color:white;
+      border-radius:40px;
+      cursor:pointer;
+    }
+
+    .slider::before{
+      content:"";
+      position:absolute;
+      width:30px;
+      height:30px;
+      left:5px;
+      top:5px;
+      background-color:#212121;
+      border-radius:50%;
+      transition:0.3s;
+    }
+
+    .switch input:checked + .slider::before{
+      transform:translateX(30px);
+    }
+
+    #notificationStatus{
+      font-size:15px;
+      margin-left:10px;
+    }
+
+    @media (max-width:600px){
+    .notification a{
+      left:20px;
+      font-size:25px;
+      margin-top:10px;
+    }
+    .notification h1{
+      font-size:25px;
+    }
+    .on{
+      font-size:15px;
+      height:70px;
+      width:90%;
+      padding:15px;
+      margin:20px auto;
+    }
+
+    .switch{
+      width:55px;
+      height:32px;
+    }
+
+    .slider::before{
+      width:24px;
+      height:24px;
+      left:4px;
+      top:4px;
+    }
+
+    .switch input:checked + .slider::before{
+      transform:translateX(23px);
+    }
+
+    #notificationStatus{
+      font-size:12px;
+      margin-left:8px;
+    }
+  }
+    
+   
+  </style>
+
+  <style>
+    :root[data-theme="light"] body { background-color:#f5f5f5 !important; color:#171717 !important; }
+    :root[data-theme="light"] .dark, :root[data-theme="light"] .profile, :root[data-theme="light"] .theme, :root[data-theme="light"] .notification, :root[data-theme="light"] .About, :root[data-theme="light"] .email, :root[data-theme="light"] .password, :root[data-theme="light"] .picture, :root[data-theme="light"] .on { background-color:#e6e6e6 !important; color:#171717 !important; }
+    :root[data-theme="light"] input { color:#171717; }
+  </style>
+</head>
+<body>
+  <div class="notification">
+    <a href="settings1.html">←</a>
+    <h1>Notification</h1>
+  </div>
+
+  <div class="on">
+    <span>Notification</span>
+
+    <label class="switch">
+      <input type="checkbox" id="notificationSwitch">
+      <span class="slider"></span>
+    </label>
+
+    <span id="notificationStatus">OFF</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="vibe-settings.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+  
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      height: 700px;
+      margin: 0;
+    }
+    
+    .arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 5px;
+    }
+    
+    .arrow a {
+      color: #e73c3c;
+      font-size:20px;
+      position: absolute;
+      left:480px;
+      text-decoration: none;
+      background: transparent;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .arrow h1 {
+      font-size: 25px;
+    }
+    
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .email,
+    .password,
+    .picture {
+      background-color: #212121;
+      border: none;
+      width:20%;
+      height:40px;
+      font-size: 21px;
+      border-radius: 15px;
+      padding: 20px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    #profileFile {
+      display: none;
+    }
+
+    .picture label {
+      cursor: pointer;
+    }
+    
+    .imge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    
+    .guna {
+      display: block;
+      width:50%;
+      height:200px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin: 20px auto;
+    }
+    
+    .syam {
+      width:120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: 60px;
+    }
+    .email input,
+    .password input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 18px;
+      font-weight: normal;
+      padding: 5px 0;
+}
+
+    button {
+      height:40px;
+      width: 400px;
+      background-color: #212121;
+      border-radius: 15px;
+      border: none;
+      color: #fb4242;
+      margin: 60px auto;
+      transition: 0.3s;
+      cursor: pointer;
+      font-size:15px;
+    }
+
+    button:active {
+      background-color: #fb4242;
+      color: black;
+      box-shadow: 0px 2px 4px #444040;
+      transform: scale(0.97);
+    }
+    label{
+      text-decoration:none;
+      -webkit-tap-highlight-color: transparent ;
+    }
+    
+    @media (max-width:600px) {
+      
+      body {
+        background-color: black;
+        color: white;
+        height: 700px;
+        margin: 0;
+      }
+      
+      .arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 5px;
+      }
+      
+      .arrow a {
+        color: #e73c3c;
+        font-size: 25px;
+        position: absolute;
+        left: 20px;
+        text-decoration: none;
+        background: transparent;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      .arrow h1 {
+        font-size: 25px;
+      }
+      
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      
+      .email,
+      .password,
+      .picture {
+        background-color: #212121;
+        border: none;
+        width: 80%;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 15px;
+        padding: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      
+      .imge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      
+      .guna {
+        display: block;
+        width: 90%;
+        height: 200px;
+        border-radius: 15px;
+        object-fit: cover;
+        margin: 20px auto;
+      }
+      
+      .syam {
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        top: 70px;
+      }
+
+      button {
+        width: 80%;
+        max-width: 500px;
+      }
+      
+    }
+  </style>
+  
+
+  <style>
+    :root[data-theme="light"] body { background-color:#f5f5f5 !important; color:#171717 !important; }
+    :root[data-theme="light"] .dark, :root[data-theme="light"] .profile, :root[data-theme="light"] .theme, :root[data-theme="light"] .notification, :root[data-theme="light"] .About, :root[data-theme="light"] .email, :root[data-theme="light"] .password, :root[data-theme="light"] .picture, :root[data-theme="light"] .on { background-color:#e6e6e6 !important; color:#171717 !important; }
+    :root[data-theme="light"] input { color:#171717; }
+  </style>
+</head>
+
+<body>
+  
+  <div class="arrow">
+    <a href="settings1.html">←</a>
+    <h1>Profile</h1>
+  </div>
+  
+  <div class="imge">
+    <img class="guna" src="IMG-20260929-WA0037.jpg">
+
+    <img class="syam" data-vibe-avatar
+         src="IMG_20260920_160814835.jpg"
+         id="profileImage" alt="Profile picture">
+  </div>
+  
+  <div class="container">
+    
+    <div class="email">
+      <span>Name</span><br>
+      <input type="text" id="name" value="Gunasyam">
+    </div>
+    
+    <div class="password">
+      <span>Email</span>
+      <input type="text" id="email" value="example@gmail.com">
+    </div>
+    
+    <div class="picture">
+
+      <label for="profileFile">
+        Profile picture
+      </label>
+
+      <input type="file"
+             accept="image/*"
+             id="profileFile">
+
+    </div>
+
+    <br>
+    
+  </div>
+
+  <center>
+    <button>Save Changes</button>
+  </center>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="vibe-settings.js"></script>
+</body>
+
+</html>
